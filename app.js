@@ -22,7 +22,10 @@ function atualizarLista() {
 
     let listagem = 0;
     while (listagem < amigos.length) {
-      lista.innerHTML += amigos[listagem] + "<br>";
+        let novoNome = document.createElement('li');
+        novoNome.textContent = amigos[listagem]
+        novoNome.classList.add('name-item');
+        lista.appendChild(novoNome);
       listagem++;  
         
     }    
